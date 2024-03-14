@@ -22,9 +22,15 @@
         <input placeholder="Password" title="Inpit title" name="password" type="password" class="input_field"
             id="password_field">
     </div>
+    
+    <div class="input_container">
+        @livewire('remember-me')
+    </div>
+    
     <button title="Sign In" type="submit" class="sign-in_btn mt-4 mb-3">
         <span>Login</span>
     </button>
+    
     <p>
         Don't have an account? <a class="inline-block text-blue-500 no-underline hover:underline"
             href="{{ route('register') }}">Register</a>
