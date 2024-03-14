@@ -10,14 +10,14 @@ class UserController extends Controller {
      * Display a listing of the resource.
      */
     public function index() {
-        //
+        return response()->json(User::all());
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request) {
-        //
+        return response()->json(User::create($request->all()));
     }
 
     /**
@@ -31,19 +31,19 @@ class UserController extends Controller {
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id) {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'type' => 'required|in:individual,team',
-        ]);
+        // $validatedData = $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'email' => 'required|email|max:255',
+        //     'type' => 'required|in:individual,team',
+        // ]);
 
         // Find the user by ID
         $user = User::findOrFail($id);
 
-        $user->update($validatedData);
+        $user->update($request->all());
 
         return redirect()
-            ->intended('admin.users')
+            ->intended('admin/users')
             ->with('success', 'User updated successfully');
     }
 

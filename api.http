@@ -1,0 +1,27 @@
+GET /api/users HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+
+###
+PUT /api/users/1 HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+
+
+{
+    "type": null
+}
+###
+
+POST /api/users HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+
+{
+    "name": "Othman",
+    "email": "root@mail.com",
+    "password": "$2y$12$W8kgHoKfecMPxv/oeVoSFeKSW3DW5r0hETlSUj5/p9QWhU0BWRYde",
+    "type": null,
+    "role": "admin",
+}
+
