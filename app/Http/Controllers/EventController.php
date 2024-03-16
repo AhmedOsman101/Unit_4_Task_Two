@@ -10,7 +10,7 @@ class EventController extends Controller {
      * Display a listing of the resource.
      */
     public function index() {
-        //
+        return view('events', ['events' => Event::all()]);
     }
 
     /**
@@ -27,8 +27,9 @@ class EventController extends Controller {
     /**
      * Display the specified resource.
      */
-    public function show(Event $event) {
-        //
+    public function show($id) {
+        $event = Event::findOrFail($id);
+        return view('events-detail', ['event' => $event]);
     }
 
     /**

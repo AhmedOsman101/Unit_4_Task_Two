@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\UserController;
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
@@ -36,9 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/events', function () {
-        return view('events', ['events' => Event::all()]);
-    })->name('events');
+    Route::resource('events', EventController::class);
 });
 
 
