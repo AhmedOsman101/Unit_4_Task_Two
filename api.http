@@ -19,8 +19,8 @@ Content-Type: application/json
 
 {
     "name": "Othman",
-    "email": "root@mail.com",
-    "password": "$2y$12$W8kgHoKfecMPxv/oeVoSFeKSW3DW5r0hETlSUj5/p9QWhU0BWRYde",
+    "email": "root3@mail.com",
+    "password": "hello",
     "type": null,
     "role": "admin",
 }
