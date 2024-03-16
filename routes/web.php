@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,18 +25,22 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
+
     Route::get('/', function () {
         return view('home');
     });
+
     Route::get('/home', function () {
         return view('home');
     });
+
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('/events', function () {
+        return view('events', ['events' => Event::all()]);
+    })->name('events');
 });
 
-Route::get('/events', function () {
-    return 'hello world';
-})->name('events');
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/users/{id}', [UserController::class, 'update']);
