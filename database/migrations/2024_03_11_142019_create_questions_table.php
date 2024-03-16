@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("event_id")->constrained();
+            $table->foreignId("event_id");
             $table->string("question");
             $table->string("answer");
             $table->timestamps();

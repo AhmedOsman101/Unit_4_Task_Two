@@ -12,8 +12,8 @@ return new class extends Migration {
         Schema::create('event_participants', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger("score")->default(0);
-            $table->foreignId("user_id")->constrained();
-            $table->foreignId("event_id")->constrained();
+            $table->foreignId("user_id");
+            $table->foreignId("event_id");
             $table->timestamps();
         });
     }

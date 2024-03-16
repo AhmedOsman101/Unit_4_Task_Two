@@ -18,6 +18,7 @@ return new class extends Migration {
                 ->default("individual")
                 ->nullable();
             $table->enum("role", ["user", "admin"])->default("user");
+            $table->json("team_members")->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
