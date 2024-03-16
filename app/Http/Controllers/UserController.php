@@ -31,17 +31,20 @@ class UserController extends Controller {
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id) {
-        // $validatedData = $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'email' => 'required|email|max:255',
-        //     'type' => 'required|in:individual,team',
-        // ]);
+        // Validate the request
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'type' => 'in:individual,team',
+        ]);
 
         // Find the user by ID
         $user = User::findOrFail($id);
 
-        $user->update($request->all());
+        // Update the user
+        $user->update($validatedData);
 
+        // Redirect to users dashboard
         return redirect()
             ->intended('admin/users')
             ->with('success', 'User updated successfully');
@@ -53,9 +56,13 @@ class UserController extends Controller {
     public function destroy($id) {
         // Find the user by ID
         $user = User::findOrFail($id);
+
+        // Delete the user
         $user->delete();
+
+        // Redirect to users dashboard
         return redirect()
-            ->intended('admin.users')
+            ->intended('admin/users')
             ->with('success', 'User updated successfully');
     }
 }
