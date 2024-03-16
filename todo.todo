@@ -80,25 +80,29 @@
         }
       },
       {
-        "key": 1710591031044,
-        "children": [],
-        "todo": {
-          "content": "make events dashboard",
-          "id": 1710591031044,
-          "level": "success",
-          "done": false,
-          "start": 1710591031044
-        }
-      },
-      {
         "key": 1710591056728,
         "children": [],
         "todo": {
           "content": "make questions dashboard",
           "id": 1710591056728,
           "level": "success",
-          "done": false,
-          "start": 1710591056728
+          "done": true,
+          "start": 1710591056728,
+          "focus": false,
+          "end": 1710592758030
+        }
+      },
+      {
+        "key": 1710591031044,
+        "children": [],
+        "todo": {
+          "content": "make events dashboard",
+          "id": 1710591031044,
+          "level": "success",
+          "done": true,
+          "start": 1710591031044,
+          "focus": false,
+          "end": 1710592755782
         }
       }
     ],
@@ -106,7 +110,7 @@
       1710590727545
     ],
     "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
-    "add_mode": "bottom",
+    "add_mode": "top",
     "virtual": false,
     "timelines": [],
     "showLine": true,
@@ -117,6 +121,6 @@
     "showEndTime": true,
     "simpleMode": false,
     "lang": "en",
-    "version": "1710591066940"
+    "version": "1710592817769"
   }
 }
