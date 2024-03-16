@@ -1,0 +1,122 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1710590707729,
+        "children": [],
+        "todo": {
+          "content": "make Admin dashboard",
+          "id": 1710590707729,
+          "level": "warning",
+          "done": false,
+          "start": 1710590707729
+        }
+      },
+      {
+        "key": 1710590727545,
+        "children": [
+          {
+            "key": 1710590744241,
+            "children": [],
+            "todo": {
+              "content": "team model",
+              "id": 1710590744241,
+              "level": "default",
+              "done": false,
+              "start": 1710590744241
+            }
+          },
+          {
+            "key": 1710590757409,
+            "children": [],
+            "todo": {
+              "content": "team migrations",
+              "id": 1710590757409,
+              "level": "default",
+              "done": false,
+              "start": 1710590757409
+            }
+          },
+          {
+            "key": 1710590763176,
+            "children": [],
+            "todo": {
+              "content": "team relations",
+              "id": 1710590763176,
+              "level": "default",
+              "done": false,
+              "start": 1710590763176
+            }
+          },
+          {
+            "key": 1710590905773,
+            "children": [],
+            "todo": {
+              "content": "team controller",
+              "id": 1710590905773,
+              "level": "default",
+              "done": false,
+              "start": 1710590905773
+            }
+          },
+          {
+            "key": 1710590913856,
+            "children": [],
+            "todo": {
+              "content": "add team members form",
+              "id": 1710590913856,
+              "level": "default",
+              "done": false,
+              "start": 1710590913856
+            }
+          }
+        ],
+        "todo": {
+          "content": "make teams table",
+          "id": 1710590727545,
+          "level": "success",
+          "done": false,
+          "start": 1710590727545
+        }
+      },
+      {
+        "key": 1710591031044,
+        "children": [],
+        "todo": {
+          "content": "make events dashboard",
+          "id": 1710591031044,
+          "level": "success",
+          "done": false,
+          "start": 1710591031044
+        }
+      },
+      {
+        "key": 1710591056728,
+        "children": [],
+        "todo": {
+          "content": "make questions dashboard",
+          "id": 1710591056728,
+          "level": "success",
+          "done": false,
+          "start": 1710591056728
+        }
+      }
+    ],
+    "expandKeys": [
+      1710590727545
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": true,
+    "restDays": [],
+    "playFontSize": 24,
+    "title": "todo",
+    "autoSort": true,
+    "showEndTime": true,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1710591066940"
+  }
+}
