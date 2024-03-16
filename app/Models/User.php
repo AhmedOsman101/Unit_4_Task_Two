@@ -48,4 +48,12 @@ class User extends Authenticatable {
     public function participants(): HasMany {
         return $this->hasMany(EventParticipant::class);
     }
+
+    public function scopeNonAdmin($query) {
+        return $query->where('role', '!=', 'admin');
+    }
+
+    public function scopeAdmins($query) {
+        return $query->where('role', '===', 'admin');
+    }
 }

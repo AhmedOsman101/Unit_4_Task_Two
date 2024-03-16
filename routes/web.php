@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
 Route::group(['middleware' => 'guest'], function () {
     Route::view('/login', 'auth.login');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
@@ -40,15 +38,6 @@ Route::get('/events', function () {
 })->name('events');
 
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', function () {
-        return 'hello world';
-    })->name('admin');
-
-    Route::get('/admin/users', function () {
-        return view('admin.usersDashboard');
-    })->name('admin.users');
-
     Route::put('/users/{id}', [UserController::class, 'update']);
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
-
 });

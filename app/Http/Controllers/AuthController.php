@@ -24,16 +24,19 @@ class AuthController extends Controller {
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             // Check the role of the authenticated user
             $user = Auth::user();
+
             if ($user->role === 'admin') {
-                // Redirect admin to admin dashboard
-                return redirect()->intended('/admin');
+                $this->logout();
+                return redirect('/login');
             } elseif ($user->role === 'user') {
                 // Redirect regular user to user dashboard
                 return redirect()->intended('/home');
             }
         }
         // If authentication fails, redirect back with error message
-        return redirect()->back()->withInput()->withErrors(['email' => 'Invalid credentials']);
+        return redirect()
+            ->back()
+            ->withErrors(['email' => 'Invalid credentials']);
     }
 
     public function register(Request $request) {
@@ -68,6 +71,6 @@ class AuthController extends Controller {
 
     public function logout() {
         Auth::logout();
-        return redirect('/login');
+        return redirect('/');
     }
 }

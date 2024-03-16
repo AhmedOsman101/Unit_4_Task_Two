@@ -2,7 +2,6 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "serve": "npm i && npm run build && npm run dev",
         "dev": "vite",
         "build": "vite build"
     },
