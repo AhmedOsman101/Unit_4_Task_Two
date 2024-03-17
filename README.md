@@ -302,7 +302,7 @@
 
 ### Entity Relationship Diagram (ERD):
 
-![alt text](erd.png)
+![alt ERD](ERD.png)
 
 # Analysis
 
