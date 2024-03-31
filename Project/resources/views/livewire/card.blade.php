@@ -2,11 +2,11 @@
 <div class="max-w-2xl mx-auto mt-5">
 
     <div class="bg-gray-800 shadow-md border border-gray-700 rounded-lg max-w-sm">
-        <a href="#">
+        <a href="{{'/events/'.$event->id}}">
             <img class="rounded-t-lg" src="{{asset('img/event.jpg')}}" alt="event">
         </a>
         <div class="p-5">
-            <a href="#">
+            <a href="{{'/events/'.$event->id}}">
                 <h5 class="text-white font-bold text-2xl tracking-tight mb-2">{{$event->name}}
                 </h5>
             </a>

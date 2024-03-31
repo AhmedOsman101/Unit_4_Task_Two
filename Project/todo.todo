@@ -9,7 +9,9 @@
           "id": 1710590707729,
           "level": "warning",
           "done": false,
-          "start": 1710590707729
+          "start": 1710590707729,
+          "focus": false,
+          "end": 1711911100108
         }
       },
       {
@@ -121,6 +123,6 @@
     "showEndTime": true,
     "simpleMode": false,
     "lang": "en",
-    "version": "1710592817769"
+    "version": "1711911103797"
   }
 }

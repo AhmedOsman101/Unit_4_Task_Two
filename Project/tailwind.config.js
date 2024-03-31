@@ -16,6 +16,8 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            opacity: ['disabled'],
+            cursor: ['disabled'],
         },
     },
 

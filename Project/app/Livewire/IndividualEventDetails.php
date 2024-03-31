@@ -4,9 +4,9 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class EventDetails extends Component {
+class IndividualEventDetails extends Component {
     public $event;
     public function render() {
-        return view('livewire.event-details');
+        return view('livewire.individual-event-details');
     }
 }

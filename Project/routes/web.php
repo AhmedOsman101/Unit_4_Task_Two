@@ -19,24 +19,40 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::view('/login', 'auth.login');
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::view('login', 'auth.login');
+    Route::post('login', [AuthController::class, 'login'])->name('login');
 
-    Route::view('/register', 'auth.register');
-    Route::post('/register', [AuthController::class, 'register'])->name('register');
+    Route::view('register', 'auth.register');
+    Route::post('register', [AuthController::class, 'register'])->name('register');
 });
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/', function () {
-        return view('home');
-    });
+    Route::view('/', 'home');
 
-    Route::get('/home', function () {
-        return view('home');
-    });
 
-    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::view('home', 'home');
+
+    Route::post(
+        'logout',
+        [AuthController::class, 'logout']
+    )->name('logout');
+
+
+    Route::get(
+        'events/team',
+        [EventController::class, 'team']
+    )->name('team_events');
+
+    Route::get(
+        'events/individual',
+        [EventController::class, 'individual']
+    )->name('individual_events');
+
+    Route::get(
+        'events/{any?}',
+        [EventController::class, 'index']
+    )->where('any', '[A-z]');
 
     Route::resource('events', EventController::class);
 
@@ -45,6 +61,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::put('/users/{id}', [UserController::class, 'update']);
-    Route::delete('/users/{id}', [UserController::class, 'destroy']);
+    Route::put('users/{id}', [UserController::class, 'update']);
+    Route::delete('users/{id}', [UserController::class, 'destroy']);
 });

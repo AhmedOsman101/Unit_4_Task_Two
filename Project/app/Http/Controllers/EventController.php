@@ -10,7 +10,13 @@ class EventController extends Controller {
      * Display a listing of the resource.
      */
     public function index() {
-        return view('events', ['events' => Event::all()]);
+        $events = Event::all();
+
+        return view('events', [
+            'events' => $events,
+            'team_events' => null,
+            'individual_events' => null
+        ]);
     }
 
     /**
@@ -44,5 +50,25 @@ class EventController extends Controller {
      */
     public function destroy(Event $event) {
         //
+    }
+
+    public function team() {
+        $team_events = Event::where('type', 'team')->get();
+
+        return view('events', [
+            'events' => null,
+            'team_events' => $team_events,
+            'individual_events' => null
+        ]);
+    }
+
+    public function individual() {
+        $individual_events = Event::where('type', 'individual')->get();
+
+        return view('events', [
+            'events' => null,
+            'team_events' => null,
+            'individual_events' => $individual_events
+        ]);
     }
 }
