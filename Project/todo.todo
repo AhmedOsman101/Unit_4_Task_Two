@@ -8,46 +8,26 @@
           "content": "make Admin dashboard",
           "id": 1710590707729,
           "level": "warning",
-          "done": false,
+          "done": true,
           "start": 1710590707729,
           "focus": false,
-          "end": 1711911100108
+          "end": 1715908101156
         }
       },
       {
         "key": 1710590727545,
         "children": [
           {
-            "key": 1710590744241,
+            "key": 1710590913856,
             "children": [],
             "todo": {
-              "content": "team model",
-              "id": 1710590744241,
+              "content": "add team members form",
+              "id": 1710590913856,
               "level": "default",
-              "done": false,
-              "start": 1710590744241
-            }
-          },
-          {
-            "key": 1710590757409,
-            "children": [],
-            "todo": {
-              "content": "team migrations",
-              "id": 1710590757409,
-              "level": "default",
-              "done": false,
-              "start": 1710590757409
-            }
-          },
-          {
-            "key": 1710590763176,
-            "children": [],
-            "todo": {
-              "content": "team relations",
-              "id": 1710590763176,
-              "level": "default",
-              "done": false,
-              "start": 1710590763176
+              "done": true,
+              "start": 1710590913856,
+              "focus": false,
+              "end": 1715908106163
             }
           },
           {
@@ -57,19 +37,49 @@
               "content": "team controller",
               "id": 1710590905773,
               "level": "default",
-              "done": false,
-              "start": 1710590905773
+              "done": true,
+              "start": 1710590905773,
+              "focus": false,
+              "end": 1715908105819
             }
           },
           {
-            "key": 1710590913856,
+            "key": 1710590763176,
             "children": [],
             "todo": {
-              "content": "add team members form",
-              "id": 1710590913856,
+              "content": "team relations",
+              "id": 1710590763176,
               "level": "default",
-              "done": false,
-              "start": 1710590913856
+              "done": true,
+              "start": 1710590763176,
+              "focus": false,
+              "end": 1715908105460
+            }
+          },
+          {
+            "key": 1710590757409,
+            "children": [],
+            "todo": {
+              "content": "team migrations",
+              "id": 1710590757409,
+              "level": "default",
+              "done": true,
+              "start": 1710590757409,
+              "focus": false,
+              "end": 1715908105075
+            }
+          },
+          {
+            "key": 1710590744241,
+            "children": [],
+            "todo": {
+              "content": "team model",
+              "id": 1710590744241,
+              "level": "default",
+              "done": true,
+              "start": 1710590744241,
+              "focus": false,
+              "end": 1715908104212
             }
           }
         ],
@@ -77,8 +87,10 @@
           "content": "make teams table",
           "id": 1710590727545,
           "level": "success",
-          "done": false,
-          "start": 1710590727545
+          "done": true,
+          "start": 1710590727545,
+          "focus": false,
+          "end": 1715908102403
         }
       },
       {
@@ -123,6 +135,6 @@
     "showEndTime": true,
     "simpleMode": false,
     "lang": "en",
-    "version": "1711911103797"
+    "version": "1715908106200"
   }
 }
